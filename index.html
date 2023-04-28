@@ -1,12 +1,55 @@
-<link rel="snippet" type="text/html" href="https://noamrap.github.io/SNIPPEST/index.html">
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const snippets = document.querySelectorAll("[data-snippet]");
-    for (const snippet of snippets) {
-      fetch(snippet.getAttribute("data-snippet"))
-        .then(response => response.text())
-        .then(html => snippet.innerHTML = html);
-    }
-  });
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
 
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1b1b1b;
+            color: #ffffff;
+            height: 80px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer p {
+            font-size: 14px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- your page content here -->
+    </div>
+    <div class="footer">
+        <p>
+            &copy;האתר קודד והועלה על ידי <a href="https://noamrap.github.io/Noam-s-Site/">נועם בניית אתרים</a> <br />
+            054-48349998
+        </p>
+    </div>
+</body>
+</html>
